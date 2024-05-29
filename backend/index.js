@@ -8,7 +8,7 @@ app.use(cors());
 
 // ------------------------Hosting A
 const path = require('path')
-const clientpath = path.join(__dirname,'./frontend/dist')
+const clientpath = path.join(__dirname,'../frontend/dist')
 app.use('/',express.static(clientpath))
 
 
@@ -29,7 +29,7 @@ app.use('/api',require('./API/order/Router'))
 // ------------------------Hosting B
 
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'./frontend/dist/index.html'))
+  res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
 })
 // mcjfenjc
 
